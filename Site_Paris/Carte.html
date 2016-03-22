@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Accidents vélo - Chloropeth</title>
+  <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+  <script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+  <script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
+  <!-- <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script> -->
+</head>
+
+<!-- <select id="var-list"> 
+  <option value="Acc">Nombre d'accidents</option>
+  <option value="C_AR">Arrondissement</option> 
+</select> -->
+
+<style>
+
+
+path {
+  stroke:white;
+  stroke-width: 1px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.legend {
+  font-size: 10px;
+}
+
+.textt {
+  font-size: 10px;
+}
+
+.update {
+
+  fill: #756bb1;
+
+}
+
+.fixe {
+
+  fill: black;
+}
+
+div.tooltip {   
+  position: relative;
+  top: -330px;
+  left: 520px;                    
+  width: 400px;                  
+  height: 20px;                 
+  padding: 2px;             
+  font-size: 12px;     
+  background-color: white;
+  border: 1px;      
+  border-radius: 8px;           
+  pointer-events: none; 
+  font-family: Arial, sans-serif;
+  color: #44646f;        
+}
+
+#var-list {
+   position: absolute;
+   left: 10px;
+   top: 30px;
+}    
+
+</style>
+
+<body>
+  <script type="text/javascript">
+
+
+// Size of the canvas on which the map will be rendered
+var width = 500,  
+    height = 400;
+
+var color_domain = [25, 40, 50, 100];
+var ext_color_domain = [0, 25, 40, 50];
+var legend_labels = ["< 25", "25-40", "40-50", ">50"];              
+var color = d3.scale.threshold()
+  .domain(color_domain)
+  .range(["#f8af6b", "#df924a", "#a26b33", "#6a4622"]);
+  //.range(["#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1"]);
+
+var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+//   .style("margin", "10px auto");
+
+var div = d3.select("body").append("div")
+  .attr("class", "tooltip")
+  // .text("Paris")
+  .html("<b>" + "PARIS" + "</b>" +  
+          "<br/>" +  "<br/>" + 
+          "<b>" + "<font color=#df924a>" + "702" + "</font>" + "</b>" +
+          " accidents cyclistes" + 
+          "<br/>" +  "<br/>" + 
+          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
+          "<br/>" +  //"<br/>" + 
+          "avec " + "<b>" + "<font color=#df924a>" + "16" + "</font>" + "</b>" +  " accidents" +       
+
+          "<br/>" +  "<br/>" + 
+          "<br/>" +  "<br/>" + 
+
+          "<b>" + "1" + "<sup>" + "er" + "</sup>" + " arrondissement" + "</b>" +  
+          "<br/>" +  "<br/>" + 
+          "<b>" + "<font color=#df924a>" + "22" + "</font>" + "</b>" +
+          " accidents cyclistes" + 
+          "<br/>" +  "<br/>" + 
+          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
+          "<br/>" +  //"<br/>" + 
+          "avec " + "<b>" + "<font color=#df924a>" + "8" + "</font>" + "</b>" +  " accidents"        );            
+//   .style("opacity", 0);
+
+var center = [2.3488000, 48.8534100];
+
+// Instantiate the projection object
+var projection = d3.geo.mercator()  //conicConformal() 
+    .center(center)
+    //.clipAngle(180)
+    // Size of the map itself, you may want to play around with this in 
+    // relation to your canvas size
+    .scale(100000)
+    // Center the map in the middle of the canvas
+    .translate([width/2, height / 2])
+    .precision(.1);
+
+
+var path = d3.geo.path().projection(projection); 
+
+var arr = svg
+    .append("g")
+    .attr("id", "arrondissements");
+
+
+d3.json("ARRONDISSEMENT.json", function(err, map) {    
+
+    var features = arr
+           .selectAll("path")
+               .data(map.features);
+      
+
+    // var test = d3.select("#var-list").on("change", function() {
+    //   var selectedValue = d3.event.target.value;
+    //   //console.log(selectedValue);
+    //   features.enter()
+    //    .append("path")
+    //        .attr('class', 'arrondissement')
+    //        .attr('fill', function(d) { 
+    //            return color(+d.properties[selectedValue]); //colorScale(+d.properties.Acc);
+    //        })
+    //        .attr("d", path)
+
+    //   .on("mouseover", function() {
+    //     d3.select(this).style("opacity", 0.5);
+    //   })
+    //   .on("mouseout", function() {
+    //     d3.select(this).style("opacity", 1);
+    //   })
+
+    //   .on("click", function(d) {
+    //     div.style("opacity", 1)
+    //       .attr("class", "tooltip")
+    //       .html("<b>" + "Paris " + d.properties["L_AR"] + "</b>" +  
+    //         "<br/>" +  "<br/>" + 
+    //         "<b>" + "<font color=#756bb1>" + d.properties["Acc"] + "</font>" + "</b>" +
+    //         " accidents faisant intervenir des vélos"); 
+    //     // div.transition().duration(300)
+    //     // .style("opacity", 1)
+    //     // .text("Paris " + d.properties["L_AR"])
+    //   });      
+    // }).node().value;
+
+    var test = "Acc";
+
+    //var colorScale = d3.scale.category20c();
+
+    features.enter()
+        .append("path")
+            .attr('class', 'arrondissement')
+            .attr('fill', function(d) { 
+                return color(+d.properties[test]); //colorScale(+d.properties.Acc);
+            })
+            .attr("d", path)
+
+
+    .on("mouseover", function() {
+      d3.select(this).style("opacity", 0.8);
+    })
+    .on("mouseout", function() {
+      d3.select(this).style("opacity", 1);
+    })
+
+    .on("click", function(d) {
+      div.style("opacity", 1)
+        .attr("class", "tooltip")
+        .html("<b>" + "PARIS" + "</b>" +  
+          "<br/>" +  "<br/>" + 
+          "<b>" + "<font color=#df924a>" + "702" + "</font>" + "</b>" +
+          " accidents cyclistes" + 
+          "<br/>" +  "<br/>" + 
+          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
+          "<br/>" +  //"<br/>" + 
+          "avec " + "<b>" + "<font color=#df924a>" + "16" + "</font>" + "</b>" +  " accidents" +       
+
+          "<br/>" +  "<br/>" + 
+          "<br/>" +  "<br/>" + 
+
+          "<b>" + d.properties["C_AR"] + "<sup>" + d.properties["ind"] + "</sup>" + " arrondissement" + "</b>" +  
+          "<br/>" +  "<br/>" + 
+          "<b>" + "<font color=#df924a>" + d.properties["Acc"] + "</font>" + "</b>" +
+          " accidents cyclistes" + 
+          "<br/>" +  "<br/>" + 
+          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a>" + d.properties["AXE"] + "</font>" + "</b>" + "," +
+          "<br/>" +  //"<br/>" + 
+          "avec " + "<b>" + "<font color=#df924a>" + d.properties["Nb_AXE"] + "</font>" + "</b>" +  " accidents"        ); 
+      // div.transition().duration(300)
+      // .style("opacity", 1)
+      // .text("Paris " + d.properties["L_AR"])
+    });
+
+
+});
+
+
+ //Adding legend for our Choropleth
+
+  var legend = svg.selectAll("g.legend")
+  .data(ext_color_domain)
+  .enter().append("g")
+  .attr("class", "legend");
+
+  var ls_w = 15, ls_h = 15;
+
+
+  legend.append("rect")
+  .attr("x", 20)
+  .attr("y", function(d, i){ return height - (i*ls_h) - 2*ls_h;})
+  .attr("width", ls_w)
+  .attr("height", ls_h)
+  .style("fill", function(d, i) { return color(d); })
+  .style("opacity", 0.8);
+
+  legend.append("text")
+  .attr("x", 50)
+  .attr("y", function(d, i){ return height - (i*ls_h) - ls_h - 2;})
+  .text(function(d, i){ return legend_labels[i]; });
+
+  // legend.append("rect")
+  // .attr("x", function(d, i){ return 40 + (i*ls_h);})
+  // .attr("y", height - 4*ls_h)
+  // .attr("width", ls_w)
+  // .attr("height", ls_h)
+  // .style("fill", function(d, i) { return color(d); })
+  // .style("opacity", 0.8);
+
+  // legend.append("text")
+  // .attr("x", function(d, i){ return 40 + (i*ls_h);})
+  // .attr("y", height - 2*ls_h )
+  // .text(function(d, i){ return legend_labels[i]; });
+
+  </script>
+</body>
+</html>

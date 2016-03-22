@@ -1,0 +1,319 @@
+body, nav a
+{
+
+    font-family: 'ralewayextralight', Arial, sans-serif;
+    color: #143218;
+}
+
+
+#bloc_page
+{
+    width: 1000px;
+    margin: auto;
+}
+.graph
+{
+    width: 600px;
+    margin: auto;
+}
+
+.chiffre
+{
+    color: #df924a;
+    font-family: 'bebas_neueregular', serif;
+    font-size: 1.7em;
+    
+}
+
+.cle
+{
+    color: #44646f;
+    font-family: 'Trebuchet MS', serif;
+    font-size: 1.0em;
+    font-weight: bold;
+    
+}
+
+.exergue
+{
+    color: #df924a;
+    font-family: 'bebas_neueregular', serif;
+    font-size: 1.0em;
+    
+}
+.exergue:hover
+{
+    color: #df924a;
+    font-family: 'bebas_neueregular', serif;
+    font-size: 1.0em;
+    opacity: 0.8;
+    
+}
+
+.chiffre:hover
+{
+    opacity: 0.8;
+    font-family: 'bebas_neueregular', serif;
+    font-size: 1.7em;
+    
+}
+
+.bloc_final
+{
+	background-color:#44646f;
+    
+}
+
+section h1, footer h1
+{
+    font-family: 'bebas_neueregular', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+p
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+}
+
+
+/* Trait */
+hr
+{
+   width: 30%;
+   color: #44646f; 
+   height: 1px;
+   margin-top: 60px;
+   margin-bottom: 60px;
+}
+
+
+/* Navigation */
+
+nav
+{
+    display: inline-block;
+    width: 1000px;
+    text-align: center;
+
+}
+
+nav ul
+{
+    list-style-type: none;
+}
+
+nav li
+{
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+nav a
+{
+    font-size: 0.9em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+
+}
+
+nav a:hover
+{
+   color: #df924a;
+ /*  border-bottom: 1px solid #df924a; */
+}
+
+/* Bannière */
+
+#banniere_image
+{
+
+    width: 1000px;
+    background: url('images/Vue_Paris_flou.jpg') no-repeat;
+    margin-top: 0px;
+    height: 580px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+
+#banniere_description
+{
+	font-family: 'helvetica_neueregular', serif;
+	font-size: 4.5em;
+	line-height: 490px;
+	text-align: center;
+	color: white;
+	opacity: 0.99;
+}
+
+#Bike
+{
+	font-family: 'bebas_neueregular', serif;
+	font-size: 4.15em;
+	line-height: 550px;
+	text-align: center;
+	color: white;
+}
+
+.titre_section
+{
+	background:  url('images/Eiffel_tower.png') no-repeat top center ;
+	font-family: 'bebas_neueregular', serif;
+	font-size: 3.15em;
+	text-align: center;
+	margin-top: 0px;
+	padding-top: 180px;
+	color:#5DBCD2;
+}
+.titre_subsection
+{
+	font-family: 'ralewayextralight', serif;
+	font-size: 1.8em;
+	margin: auto;
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 25px;
+	color: #5DBCD2;
+	opacity: 0.99;
+	position: relative;
+}
+
+.logo
+{
+	margin-left: auto;
+    margin-right: auto;
+    position: relative;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+/* Footer */
+
+footer
+{
+    background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
+    padding-top: 25px;
+}
+
+footer p, footer ul
+{
+    font-size: 0.8em;
+}
+
+footer h1
+{
+    font-size: 1.1em;
+}
+
+.dangereux
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 46%;
+    text-align: justify;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.carte
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dangereux3
+{
+    display: inline-block;
+    
+    width: 30%;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pchiffre
+{
+
+    text-align: center;
+    font-family: 'bebas_neueregular', serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #44646f;
+    margin: 0em;
+
+}
+
+.pchiffre_small
+{
+
+    text-align: center;
+    font-family: 'bebas_neueregular', serif;
+    font-size: 1.0em;
+    font-weight: bold;
+    color: #44646f;
+    margin: 0em;
+
+}
+
+
+
+.tweet
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    color: white;
+    padding-left: 15px;
+}
+
+
+
+@font-face {
+    font-family: 'helvetica_neueregular';
+    src: url('HelveticaNeue-UltraLight-webfont.eot');
+    src: url('HelveticaNeue-UltraLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('HelveticaNeue-UltraLight-webfont.woff2') format('woff2'),
+         url('HelveticaNeue-UltraLight-webfont.woff') format('woff'),
+         url('HelveticaNeue-UltraLight-webfont.ttf') format('truetype'),
+         url('HelveticaNeue-UltraLight-webfont.svg#helvetica_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('BebasNeue-webfont.eot');
+    src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BebasNeue-webfont.woff2') format('woff2'),
+         url('BebasNeue-webfont.woff') format('woff'),
+         url('BebasNeue-webfont.ttf') format('truetype'),
+         url('BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ralewayextralight';
+    src: url('Raleway-ExtraLight-webfont.eot');
+    src: url('Raleway-ExtraLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Raleway-ExtraLight-webfont.woff2') format('woff2'),
+         url('Raleway-ExtraLight-webfont.woff') format('woff'),
+         url('Raleway-ExtraLight-webfont.ttf') format('truetype'),
+         url('Raleway-ExtraLight-webfont.svg#ralewayextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
