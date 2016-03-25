@@ -1,0 +1,812 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Montants investis par arrondissement</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+${demo.css}
+		</style>
+		<script type="text/javascript">
+$(function () {
+    // Create the chart
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Montants investis par arrondissement'
+        },
+        subtitle: {
+            text: 'Cliquez sur la colonne de votre arrondissement pour voir la répartition par catégorie '
+        },
+        xAxis: {
+            type: 'category'
+        },
+        yAxis: {
+            title: {
+                text: 'Montants'
+            }
+
+        },
+        legend: {
+            enabled: false
+        },
+        plotOptions: {
+            series: {
+                borderWidth: 0,
+                dataLabels: {
+                    enabled: false,
+                    format: '{point.y:.1f}%'
+                }
+            }
+        },
+        exporting : {enabled : false},
+        credits : {enabled : false},
+
+        tooltip: {
+            headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b> euros investis<br/>'
+        },
+
+        series: [{
+            name: 'Montants',
+            colorByPoint: true,
+            data: [{
+                name: '1',
+                y: 16971276,
+                drilldown: '1er arrondissement'
+            }, {
+                name: '2',
+                y: 10759009,
+                drilldown: '2ème arrondissement'
+            }, {
+                name: '3',
+                y: 34962024,
+                drilldown: '3ème arrondissement'
+            }, {
+                name: '4',
+                y: 45490452,
+                drilldown: '4ème arrondissement'
+            }, {
+                name: '5',
+                y: 17458600,
+                drilldown: '5ème arrondissement'
+            }, {
+                name: '6',
+                y: 17386664,
+                drilldown: '6ème arrondissement'
+            }, {
+                name: '7',
+                y: 15570398,
+                drilldown: '7ème arrondissement'
+            }, {
+                name: '8',
+                y: 17715150,
+                drilldown: '8ème arrondissement'
+            }, {
+                name: '9',
+                y: 23457872,
+                drilldown: '9ème arrondissement'
+            }, {
+                name: '10',
+                y: 51998648,
+                drilldown: '10ème arrondissement'
+            }, {
+                name: '11',
+                y: 70076856,
+                drilldown: '11ème arrondissement'
+            }, {
+                name: '12',
+                y: 88528672,
+                drilldown: '12ème arrondissement'
+                }, {
+                name: '13',
+                y: 108332248,
+                drilldown: '13ème arrondissement'
+            }, {
+                name: '14',
+                y: 129831272,
+                drilldown: '14ème arrondissement'
+            }, {
+                name: '15',
+                y: 73600240,
+                drilldown: '15ème arrondissement'
+                }, {
+                name: '16',
+                y: 49746800,
+                drilldown: '16ème arrondissement'
+            }, {
+                name: '17',
+                y: 132261080,
+                drilldown: '17ème arrondissement'
+            }, {
+                name: '18',
+                y: 171827968,
+                drilldown: '18ème arrondissement'
+                }, {
+                name: '19',
+                y: 110923984,
+                drilldown: '19ème arrondissement'
+            }, {
+                name: '20',
+                y: 147952208,
+                drilldown: '20ème arrondissement'
+            }]
+        }],
+        drilldown: {
+            series: [{
+                name: '1er arrondissement',
+                id: '1er arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        1325000
+                    ],
+                    [
+                        'Culture',
+                        3754000
+                    ],
+                    [                    
+                        'Ecole',
+                        815750
+                    ],
+                    [
+                        'Environnement',
+                        76000
+                    ],
+                    [
+                        'Patrimoine',
+                        5302000
+                    ],
+                    [
+                        'Sport',
+                        545000
+                    ], 
+                    [
+                        'Voirie',
+                        5153525
+                    ]
+                ]   
+            },{
+                name: '2ème arrondissement',
+                id: '2ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        665000
+                    ],
+                    [
+                        'Culture',
+                        580000
+                    ],
+                    [                    
+                        'Ecole',
+                        2792000
+                    ],
+                    [
+                        'Environnement',
+                        380000
+                    ],
+                    [
+                        'Patrimoine',
+                        655000
+                    ],
+                    [
+                        'Sport',
+                        1408564
+                    ], 
+                    [
+                        'Voirie',
+                        4288446
+                    ]
+                ]   
+            },{
+                name: '3ème arrondissement',
+                id: '3ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        8195000
+                    ],
+                    [
+                        'Culture',
+                        11179148
+                    ],
+                    [                    
+                        'Ecole',
+                        2765000
+                    ],
+                    [
+                        'Environnement',
+                        919199
+                    ],
+                    [
+                        'Patrimoine',
+                        3515000
+                    ],
+                    [
+                        'Sport',
+                        6052000
+                    ], 
+                    [
+                        'Voirie',
+                        2336675
+                    ]
+                ]   
+            },{
+                name: '4ème arrondissement',
+                id: '4ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        12660000
+                    ],
+                    [
+                        'Culture',
+                        7215000
+                    ],
+                    [                    
+                        'Ecole',
+                        1825000
+                    ],
+                    [
+                        'Environnement',
+                        2450000
+                    ],
+                    [
+                        'Patrimoine',
+                        1873500
+                    ],
+                    [
+                        'Sport',
+                        10097000
+                    ], 
+                    [
+                        'Voirie',
+                        9369951
+                    ]
+                ]   
+            },{
+                name: '5ème arrondissement',
+                id: '5ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        5839600
+                    ],
+                    [
+                        'Culture',
+                        554000
+                    ],
+                    [                    
+                        'Ecole',
+                        1665500
+                    ],
+                    [
+                        'Environnement',
+                        898500
+                    ],
+                    [
+                        'Patrimoine',
+                        2847000
+                    ],
+                    [
+                        'Sport',
+                        1525000
+                    ], 
+                    [
+                        'Voirie',
+                        4129000
+                    ]
+                ]   
+            },{
+                name: '6ème arrondissement',
+                id: '6ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        2090000
+                    ],
+                    [
+                        'Culture',
+                        670000
+                    ],
+                    [                    
+                        'Ecole',
+                        1278165
+                    ],
+                    [
+                        'Environnement',
+                        460000
+                    ],
+                    [
+                        'Patrimoine',
+                        630000
+                    ],
+                    [
+                        'Sport',
+                        4975000
+                    ], 
+                    [
+                        'Voirie',
+                        7283500
+                    ]
+                ]   
+            },{
+                name: '7ème arrondissement',
+                id: '7ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        1131748
+                    ],
+                    [
+                        'Culture',
+                        1063000
+                    ],
+                    [                    
+                        'Ecole',
+                        1982000
+                    ],
+                    [
+                        'Environnement',
+                        2068200
+                    ],
+                    [
+                        'Patrimoine',
+                        1132000
+                    ],
+                    [
+                        'Sport',
+                        1055000
+                    ], 
+                    [
+                        'Voirie',
+                        7138450
+                    ]
+                ]         
+        },{
+                name: '8ème arrondissement',
+                id: '8ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        570000
+                    ],
+                    [
+                        'Culture',
+                        6723000
+                    ],
+                    [                    
+                        'Ecole',
+                        1463000
+                    ],
+                    [
+                        'Environnement',
+                        1410189
+                    ],
+                    [
+                        'Patrimoine',
+                        1247000
+                    ],
+                    [
+                        'Sport',
+                        260000
+                    ], 
+                    [
+                        'Voirie',
+                        6041960
+                    ]
+                ]
+        },{
+                name: '9ème arrondissement',
+                id: '9ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        5961677
+                    ],
+                    [
+                        'Culture',
+                        3778000
+                    ],
+                    [                    
+                        'Ecole',
+                        3419404
+                    ],
+                    [
+                        'Environnement',
+                        732500
+                    ],
+                    [
+                        'Patrimoine',
+                        2152000
+                    ],
+                    [
+                        'Sport',
+                        2707340
+                    ], 
+                    [
+                        'Voirie',
+                        4706950
+                    ]
+                ]   
+             },{
+                name: '10ème arrondissement',
+                id: '10ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        6164000
+                    ],
+                    [
+                        'Culture',
+                        19169756
+                    ],
+                    [                    
+                        'Ecole',
+                        9376500
+                    ],
+                    [
+                        'Environnement',
+                        6232000
+                    ],
+                    [
+                        'Patrimoine',
+                        1900000
+                    ],
+                    [
+                        'Sport',
+                        3330000
+                    ], 
+                    [
+                        'Voirie',
+                        5826390
+                    ]
+                ]   
+                },{
+                name: '11ème arrondissement',
+                id: '11ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        12702000
+                    ],
+                    [
+                        'Culture',
+                        3579584
+                    ],
+                    [                    
+                        'Ecole',
+                        10984446
+                    ],
+                    [
+                        'Environnement',
+                        4325000
+                    ],
+                    [
+                        'Patrimoine',
+                        3603879
+                    ],
+                    [
+                        'Sport',
+                        21349498
+                    ], 
+                    [
+                        'Voirie',
+                        13532451
+                    ]
+                ]   
+            },{
+                name: '12ème arrondissement',
+                id: '12ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        26699000
+                    ],
+                    [
+                        'Culture',
+                        1845000
+                    ],
+                    [                    
+                        'Ecole',
+                        9650444
+                    ],
+                    [
+                        'Environnement',
+                        7087332
+                    ],
+                    [
+                        'Patrimoine',
+                        5915000
+                    ],
+                    [
+                        'Sport',
+                        29010000
+                    ], 
+                    [
+                        'Voirie',
+                        8321900
+                    ]
+                ]   
+                },{
+                name: '13ème arrondissement',
+                id: '13ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        16118290
+                    ],
+                    [
+                        'Culture',
+                        11538500
+                    ],
+                    [                    
+                        'Ecole',
+                        29138200
+                    ],
+                    [
+                        'Environnement',
+                        8214000
+                    ],
+                    [
+                        'Patrimoine',
+                        1535000
+                    ],
+                    [
+                        'Sport',
+                        26805540
+                    ], 
+                    [
+                        'Voirie',
+                        14982720
+                    ]
+                ]
+            },{
+                name: '14ème arrondissement',
+                id: '14ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        14925000
+                    ],
+                    [
+                        'Culture',
+                        16766000
+                    ],
+                    [                    
+                        'Ecole',
+                        14449355
+                    ],
+                    [
+                        'Environnement',
+                        3730000
+                    ],
+                    [
+                        'Patrimoine',
+                        1592088
+                    ],
+                    [
+                        'Sport',
+                        25112026
+                    ], 
+                    [
+                        'Voirie',
+                        53256800
+                    ]
+                ]   
+            },{
+                name: '15ème arrondissement',
+                id: '15ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        13291500
+                    ],
+                    [
+                        'Culture',
+                        1022000
+                    ],
+                    [                    
+                        'Ecole',
+                        6352000
+                    ],
+                    [
+                        'Environnement',
+                        15085000
+                    ],
+                    [
+                        'Patrimoine',
+                        3483905
+                    ],
+                    [
+                        'Sport',
+                        26313200
+                    ], 
+                    [
+                        'Voirie',
+                        8052632
+                    ]
+                ]      
+            },{
+                name: '16ème arrondissement',
+                id: '16ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        6832000
+                    ],
+                    [
+                        'Culture',
+                        6567000
+                    ],
+                    [                    
+                        'Ecole',
+                        5442491
+                    ],
+                    [
+                        'Environnement',
+                        3367000
+                    ],
+                    [
+                        'Patrimoine',
+                        2364310
+                    ],
+                    [
+                        'Sport',
+                        14065000
+                    ], 
+                    [
+                        'Voirie',
+                        11109000
+                    ]
+                ]   
+            },{
+                name: '17ème arrondissement',
+                id: '17ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                       13623707 
+                    ],
+                    [
+                        'Culture',
+                        1119906
+                    ],
+                    [                    
+                        'Ecole',
+                        32177896
+                    ],
+                    [
+                        'Environnement',
+                        29244000
+                    ],
+                    [
+                        'Patrimoine',
+                        4145000
+                    ],
+                    [
+                        'Sport',
+                        43521368
+                    ], 
+                    [
+                        'Voirie',
+                        8429200
+                    ]
+                ]   
+                },{
+                name: '18ème arrondissement',
+                id: '18ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        17297340
+                    ],
+                    [
+                        'Culture',
+                        2592000
+                    ],
+                    [                    
+                        'Ecole',
+                        95713704
+                    ],
+                    [
+                        'Environnement',
+                        9225000
+                    ],
+                    [
+                        'Patrimoine',
+                        3185000
+                    ],
+                    [
+                        'Sport',
+                        20626448
+                    ], 
+                    [
+                        'Voirie',
+                        23188476
+                    ]
+                ]   
+            },{
+                name: '19ème arrondissement',
+                id: '19ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        15210169
+                    ],
+                    [
+                        'Culture',
+                        1507000
+                    ],
+                    [                    
+                        'Ecole',
+                        33089132
+                    ],
+                    [
+                        'Environnement',
+                        26195000
+                    ],
+                    [
+                        'Patrimoine',
+                        22307382
+                    ],
+                    [
+                        'Sport',
+                        22307382
+                    ], 
+                    [
+                        'Voirie',
+                        10560300
+                    ]
+                ]   
+            },{
+                name: '20ème arrondissement',
+                id: '20ème arrondissement',
+                data: [
+                    [
+                        'Crèche',
+                        39961204
+                    ],
+                    [
+                        'Culture',
+                        7200000
+                    ],
+                    [                    
+                        'Ecole',
+                        27518512
+                    ],
+                    [
+                        'Environnement',
+                        6710000
+                    ],
+                    [
+                        'Patrimoine',
+                        4929826
+                    ],
+                    [
+                        'Sport',
+                        47962832
+                    ], 
+                    [
+                        'Voirie',
+                        13669834
+                    ]
+                ]   
+            }]
+        }
+    });
+});
+		</script>
+	</head>
+	<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+	</body>
+</html>

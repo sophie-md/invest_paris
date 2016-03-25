@@ -4,41 +4,12 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
         <title>Les investissements de la mairies de Paris 2010 - 2016 </title>
-
-
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('.scrollTo').click( function() { // Au clic sur un élément
-					var page = $(this).attr('href'); // Page cible
-					var speed = 1000; // Durée de l'animation (en ms)
-					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-					return false;
-				});
-			});
-		</script>
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
-
-
-
-		<script src="http://code.highcharts.com/highcharts.js"></script>
-		<script src="http://code.highcharts.com/modules/exporting.js"></script>
-        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
-  		<script type="text/javascript" src="http://d3js.org/topojson.v0.min.js"></script>
-
- 
-
-		<style type="text/css">a:link{text-decoration:none}</style>
-
-  		
+  		<style type="text/css">a:link{text-decoration:none}</style>
+ 		
     </head>
 
 
 		<style>
-
 
 		path {
 		  stroke:white;
@@ -90,8 +61,8 @@
                    Les investissements de la ville 
                 </div>
             </div>
-            	<hr />
-            	<p> Vous avez toujours rêvé de savoir quels trottoirs avait été réparés près de chez vous? Combien coûte la répartion des sanitaires de l'école d'à côté ainsi que la nouvelle piscine de l'arrondissment d'à côté? Avec notre carte vous pouvez voir les investissemnts qui sont arrivés près de chez vous, du plus anectodique au plus conséquent, du baroque au banal. N'hésitez pas à jouer avce les filtres pour savoir qui sont les champions de la crèche et ceux des toits d'église percés!</p>
+                       	<hr />
+            	<p> Vous avez toujours rêvé de savoir quels trottoirs avait été réparés près de chez vous? Combien coûte la répartion des sanitaires de l'école d'à côté ainsi que la nouvelle piscine? Avec notre carte vous pouvez voir les investissemnts qui sont arrivés près de chez vous, du plus anectodique au plus conséquent, du baroque au banal. N'hésitez pas à jouer avce les filtres pour savoir qui sont les champions de la crèche et ceux des toits d'église percés!</p>
             	<hr />
 			</section>
 				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="carte">Carte</h1></a>
@@ -99,60 +70,52 @@
  				
 
  				<div class="carte">
- 				<iframe src="carte_index.html" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="1200" height="450" ></iframe>
-				 </div>    
-   				
+ 				<iframe src="index_layer.html" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width=100% height="500" ></iframe>
+				   				
+				<p> Cette carte représente les investissements qui ont été votés par le conseil de paris dans les budgets primitifs des années 2015 et 2016. En cliquant sur les bulles vous pouvez avoir plus de détails : Pour la rénovation de l'espace de saut en longueur du Gymnase Didot 130 000 euros ont été investis !</p>
+				 </div>     
+
+
    				 <h1 class="titre_subsection" style="margin-top:100px"> Le sport et la préparation pour les J.O d'abord?</h1>
+   				
 
-   				 test2
-ceci n'est pas pereil que le master
-
-				<p>Alors que certains grand projets de rénovation urbaines sont en train de remodeler le paysage parisien (Projet des Halles) le premier poste d'investissement entre les années 2010 et 2016 est le sport! Mais qu'en est-il des écoles et des musées? </p>
+				<p>Alors que certains grand projets de rénovation urbaines sont en train de remodeler le paysage parisien (Projet des Halles) le premier poste d'investissement entre les années 2010 et 2016 est le sport.</p>
 
 				<div class="dangereux">
-				<iframe src="cat/cat_index.html" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="530" height="320"></iframe>
-				</div>  
+				<iframe src="cat_highchart.htm" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="500" height="450"></iframe>
+				</div> 							 	
+						
 
 				<div class="dangereux">
-				<p> Les investissements se concentrent principalment sur le sport qui représente <span class="chiffre">20%</span> des investissemnts de la mairies de Paris ces 6 dernières années. La mairie a donc investit autant dans les crèches et la culture en cumulée que dans le sport. Quels sont les grands édifices qui ont coûté cher? </p>
+				<p> Les investissements se concentrent principalement sur le sport qui représente <span class="chiffre">20%</span> des investissemnts de la mairies de Paris ces 6 dernières années. La mairie a donc investit autant dans les crèches et la culture en cumulée que dans le sport. Quels sont les grands édifices qui ont coûté cher? </p>
 				</div>  
-
-
-
-
-
 
 
 				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="montant">Les montants investis par arrondissement</h1></a>
 
 
-				<h1 class="titre_subsection"> Les arrondissements à 2 chiffres investissent plus...</h1>
-					<iframe width="800" height="450" src="//embed.chartblocks.com/1.0/?c=56e8192d9973d2c44a158687&t=4fa09b68b400359" frameBorder="0"></iframe>
+				<h1 class="titre_subsection"> Les arrondissements à 2 chiffres investissent plus en valeur...</h1>
+				<div class="Histo">
+					<iframe  src="montant_arro.htm" frameBorder="0" align="center" width="800" height="500"></iframe>
+				</div>
+				<h1 class="titre_subsection"> Mais les montants investis par tête favorisent le centre </h1>
+				<div class="carte">
+					<iframe  src="montant_arro_pop.htm"  frameBorder="0" width="800" height="500"></iframe>
+				</div>
+
 		        <p> Les arrondissement à 2 chiffres remportent la mise, le 18 vainqueur toute catégorie</p>
-		        	
-
-			
-
-
+		        
 		        <h1 class="titre_subsection" style="margin-top:30px">Des priorités budgétaires différentes </h1>
-						<iframe src="ranking/ranking_index.html" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="530" height="320"></iframe>
-				<p>SLes arrondissemnets du centre investissent plus dans la culture.</p>
-					
+				
+		        
+				<p>Ici, le classement des arrondissments que je n'arrive pas à faire, suivi d'une jolie présentation de 2-3 faits marquants</p>
 
-
-
-
-
-
-				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="tete"> La redistribution </h1></a>
-		        <p>Quand on prend en compte la poulation blabla  </p>
-
-		        <div class="dangereux3">
+				<div class="dangereux3">
 
 
 		        	<div class="logo"><img src="images/arriere.png" width="100" height="200" />  </div>
 
-					<p class="pchiffre"><span class="chiffre">17%</span> <br/> par choc arrière</p>
+					<<p class="pchiffre"> Les 18èmes investi <span class="chiffre">8 fois</span> <br/> plus que les XX</p>
 		        	
 
 		        </div>
@@ -164,9 +127,9 @@ ceci n'est pas pereil que le master
 
 		         		<div class="logo" style="margin-bottom:40px"><img src="images/lateral.png" width="140" height="120" />  </div>
 		        	
-						<p class="pchiffre"><span class="chiffre">76%</span> <br/> par choc latéral</p> 
-						<p class="pchiffre_small">dont  <span class="chiffre">51%</span> dûs à un angle mort</p> 
-						<p class="pchiffre_small">et  <span class="chiffre">20%</span> à l'ouverture d'une portière</p> 
+						<p class="pchiffre"><span class="chiffre">700</span> <br/> par tête dans tel arro</p> 
+						<p class="pchiffre_small">alors que c'est<span class="chiffre">50</span> dans le 7</p> 
+						<p class="pchiffre_small">donc  <span class="chiffre">7 fois</span> mois</p> 
 		        		
 				</div>
 
@@ -175,297 +138,74 @@ ceci n'est pas pereil que le master
 
 		        	<div class="logo"><img src="images/frontal.png" width="100" height="200" />  </div>
 
-					<p class="pchiffre"><span class="chiffre">3%</span> <br/> par choc frontal</p>
+					<p class="pchiffre">blabla<span class="chiffre">X %</span> <br/> blabla</p>
 		        	
 
 		        </div>
+		
+
+				<p>Les arrondissements du centre investissent plus dans la culture.</p>
 
 
+				<a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="tete"> La redistribution </h1></a>
+		        <p>Quand on prend en compte la poulation blabla  </p>
 
-					
-
-		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="riveGauche">Rive Gauche, Rive Droite ?</h1></a>
-		      	<h1 class="titre_subsection"> Plus d'investissement dans XX sur la rive droite !</h1>
-
-		      	<div class="dangereux">
-
-		        <p> commentaires </p> 
-
-		        <p class="pchiffre" style="text-align: left">Un pic de trafic le <span class="exergue">matin</span> et le <span class="exergue">soir</span> </p>
-
-		        <p>mais truc...</p>
-
+		        <div class="carte"> 
+		        <iframe src="index_redis.htm" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="800" height="500"></iframe>		
 		        </div>
+
+		        				
+
+		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="riveGauche">Gauche et droite, une quetsion de rive ou d'urne?</h1></a>
+		      	<h1 class="titre_subsection"> Avantage à la rive droite...</h1>
+						
+		      	<div class="dangereux">
+		      		<p> En matière de rive, la rive droite a bénéficié des plus gros crédits et elle représente <span class="chiffre">XX%</span> des investissements votés par le Conseil de paris, alors qu'elle ne représente que XX% de la population! </p>
+		      		<p>Blabal nouveau paragraphe pour une nouvelle ligne : donnez qq exemple</p>
+		      	</div>
 				
+				<div class="dangereux">
+					<iframe src="rivedroite/index.html" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="450" height="300"></iframe>
 
-		        <div class="dangereux">
+					<p> <i> <span class="cle">Clé de lecture</span> : Total des budgets d'investissements localisés en fonction de la rive de la Seine entre 2010 et 2016 et en fonction de la population de l'année 2016.</i> </p> 
+				</div>
 
-					<div class="graph">
+										<h1 class="titre_subsection"> ... et aux arrondissements à gauche dans les urnes</h1>
 
-		         		<iframe src="http://cf.datawrapper.de/EiW4g/4/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="530" height="320"></iframe>
+				<div class="dangereux">
 
-					</div>
-
-		        </div>	
-
-				<p> <i> <span class="cle">Clé de lecture</span> : en moyenne, entre 8 et 9h, 9.483 trajets de vélibs sont effectués un jour de semaine contre 1.378 un jour de week-end. Le trafic Vélib est utilisé comme variable proxy du trafic cycliste global. </i> </p> 
-
-
-		      	<h1 class="titre_subsection" style="margin-top:50px">... ET D'ACCIDENTS</h1>
-		        
-		      	<div class="dangereux">
-		        <p>Comment se répartissent les accidents de vélos au cours de la journée ? Suivent-ils la même dynamique que celle du trafic ? Ou font-ils apparaître une tendance différente exposant des moments de la journée plus risqués pour un cycliste ?</p>
-
-		        <p class="pchiffre" style="text-align: left">Qui se <span class="exergue">retrouve</span> au sein des accidents </p>
-
-		        <p>Les accidents de vélos se répartissent au cours d'un jour ouvré de manière quasi identique au trafic cycliste. Cela suggère que le risque d'accident pour un cycliste au cours d'une journée est constant : pour un nombre de vélo donné, la part d'accident est constante En particulier, il ne dépend pas des conditions de circulation. Contre intuitif ? Sauf si on considére que le cycliste intériorise ce risque lié au traffic routier et adapte en conséquence sa concentration. </p>
+		        <iframe src="arrond_gauche/index.html" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="530" height="320"></iframe>
+				<p> <i> <span class="cle">Clé de lecture</span> : Total des budgets d'investissements localisés en fonction de l'appartenance politique du conseil d'arrondissement entre 2010 et 2016 et en fonction de la population de l'année 2016. </i> </p> 
 
 		        </div>
 
-
 		        <div class="dangereux">
-		        	<div class="graph" style="margin-top:40px">
-		        		<iframe src="http://cf.datawrapper.de/9wjAK/1/" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="530" height="320"></iframe>
-		        	</div>
-		        </div>
 
-		        <p> <i> <span class="cle">Clé de lecture</span> : au cours d'une journée type de semaine, entre 8 et 9h, le trafic cycliste atteint 2,5 fois son niveau moyen de la journée et le nombre d'accident 1,77 fois le sien.</i> </p> 
+		        <p> La Rive gauche présente <span class="chiffre">XX%</span>  des investissements votés par le Conseil de paris, blablabalbalablab reocntez notre vie</p>
+		        </div>
+    
+
+				     	
 
 
 		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="sud">Les perdants</h1>
 		        </a>
 
+    
 
 
+
+		        <p>Je ne sais plus trop quoi mettre dans cette partie</p>
+				
+
+
+		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="fun">Les inevstissemnts ingrats</h1></a>
+		       <h1 class="titre_subsection"> Des millions dans des investissements nécessaires, mais qui ne vendent pas toujours du rêve ! </h1>
 		        
-
-
-
-
-
-		        <div id="carte">
-					
-		         <script type="text/javascript">
-
-
-					// Size of the canvas on which the map will be rendered
-					var width = 600,  
-					    height = 400;
-
-					var color_domain = [25, 40, 50, 100];
-					var ext_color_domain = [0, 25, 40, 50];
-					var legend_labels = ["< 25 accidents", "25-40", "40-50", ">50"];              
-					var color = d3.scale.threshold()
-					  .domain(color_domain)
-					  .range(["#f8af6b", "#df924a", "#a26b33", "#6a4622"]);
-					  //.range(["#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1"]);
-
-					var svg = d3.select("div#carte").append("svg")
-					      .attr("width", width)
-					      .attr("height", height);
-					//   .style("margin", "10px auto");
-
-					var div = d3.select("div#carte").append("div")
-					  .attr("class", "tooltip")
-					  // .text("Paris")
-					  .html("<b>" + "<font face='bebas_neueregular' size=5>" + "PARIS" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a>" + "702" + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a>" + "16" + "</font>" + "</b>" +  " accidents" +       
-
-					          "<br/>" +  "<br/>" + 
-					          "<br/>" +  "<br/>" + 
-
-					          "<b>" + "<font face='bebas_neueregular' size=5>" + "1" + "<sup>" + "er" + "</sup>" + " arrondissement" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a>" + "22" + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a>" + "8" + "</font>" + "</b>" +  " accidents"        );            
-					//   .style("opacity", 0);
-
-					var center = [2.3488000, 48.8534100];
-
-					// Instantiate the projection object
-					var projection = d3.geo.mercator()  //conicConformal() 
-					    .center(center)
-					    //.clipAngle(180)
-					    // Size of the map itself, you may want to play around with this in 
-					    // relation to your canvas size
-					    .scale(110000)
-					    // Center the map in the middle of the canvas
-					    .translate([width/2, height / 2])
-					    .precision(.1);
-
-
-					var path = d3.geo.path().projection(projection); 
-
-					var arr = svg
-					    .append("g")
-					    .attr("id", "arrondissements");
-
-
-					d3.json("https://api.myjson.com/bins/n005", function(err, map) {    
-
-					    var features = arr
-					           .selectAll("path")
-					               .data(map.features);
-					     
-
-					    var test = "Acc";
-
-					    //var colorScale = d3.scale.category20c();
-
-					    features.enter()
-					        .append("path")
-					            .attr('class', 'arrondissement')
-					            .attr('fill', function(d) { 
-					                return color(+d.properties[test]); //colorScale(+d.properties.Acc);
-					            })
-					            .attr("d", path)
-
-
-					    .on("mouseover", function() {
-					      d3.select(this).style("opacity", 0.8);
-					    })
-					    .on("mouseout", function() {
-					      d3.select(this).style("opacity", 1);
-					    })
-
-					    .on("click", function(d) {
-					      div.style("opacity", 1)
-					        .attr("class", "tooltip")
-					        .html("<b>" + "<font face='bebas_neueregular' size=5>" + "PARIS" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a>" + "702" + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a>" + "la rue de Rivoli" + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a>" + "16" + "</font>" + "</b>" +  " accidents" +       
-
-					          "<br/>" +  "<br/>" + 
-					          "<br/>" +  "<br/>" + 
-
-					          "<b>" + "<font face='bebas_neueregular' size=5>" + d.properties["C_AR"] + "<sup>" + d.properties["ind"] + "</sup>" + " arrondissement" + "</font>" + "</b>" +  
-					          "<br/>" +  "<br/>" + 
-					          "<b>" + "<font color=#df924a>" + d.properties["Acc"] + "</font>" + "</b>" +
-					          " accidents cyclistes" + 
-					          "<br/>" +  "<br/>" + 
-					          "L'axe le plus accidenté est " + "<b>" + "<font color=#df924a>" + d.properties["AXE"] + "</font>" + "</b>" + "," +
-					          //"<br/>" +  //"<br/>" + 
-					          " avec " + "<b>" + "<font color=#df924a>" + d.properties["Nb_AXE"] + "</font>" + "</b>" +  " accidents"        ); 
-					      // div.transition().duration(300)
-					      // .style("opacity", 1)
-					      // .text("Paris " + d.properties["L_AR"])
-					    });
-
-
-					});
-
-
-					 //Adding legend for our Choropleth
-
-					  var legend = svg.selectAll("g.legend")
-					  .data(ext_color_domain)
-					  .enter().append("g")
-					  .attr("class", "legend");
-
-					  var ls_w = 15, ls_h = 15;
-
-
-					  legend.append("rect")
-					  .attr("x", 50)
-					  .attr("y", function(d, i){ return height - 40 - (i*ls_h) - 2*ls_h;})
-					  .attr("width", ls_w)
-					  .attr("height", ls_h)
-					  .style("fill", function(d, i) { return color(d); })
-					  .style("opacity", 0.8);
-
-					  legend.append("text")
-					  .attr("x", 70)
-					  .attr("y", function(d, i){ return height - (i*ls_h) - ls_h - 44;})
-					  .text(function(d, i){ return legend_labels[i]; });
-
-					  </script>
-
-				</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-		        <p>Les plus grands arrondissements tels que le 16e et 12e concentrent un nombre important d'accidents cyclistes. Toutefois, le 18e et 19e ne suivent pas cette tendance. Leur dénivelé important pouvant expliquer un trafic cycliste plus faible et donc des accidents moins nombreux.</p>
-
-				<p class="pchiffre" style="text-align: left"> Des grands axes <span class="exergue">peu adaptés</span> à la pratique du vélo</p>
-
-
-				<p>
-
-		         Par ailleurs, dans la plupart des arrondissements, les voies les plus accidentées sont de grands axes, à fort trafic. La rue de Rivoli recense ainsi le nombre le plus élevé d'accidents cyclistes de la capitale en 2012. La rue de Tolbiac ou l'avenue Daumesnil dénombrent quant à elles 11 et 14 accidents cyclistes. </p>
-
-
-
-
-
-		        <a class="scrollTo" href="#bloc_page"><h1 class="titre_section" id="fun">VDes trottoirs en or et des chiottes en diamants!</h1></a>
-		        <p>Ca coute cher! <p>Et on s'en fout</p>
-
-		        
-		        <div class="dangereux" >
-		      	<h1 class="titre_subsection" id="piste_cyclable">PISTE CYCLABLE</h1>
-
-
-		        	<div class="logo" ><img src="images/pistecyclable.png" width="140" height="120" />  </div>
-
-					<p class="pchiffre"><span class="chiffre">111</span>  accidents cyclistes</p>
-		        	<p class="pchiffre"><span class="chiffre">59%</span>  avec un véhicule motorisé</p>
-		        	<p class="pchiffre"><span class="chiffre">28%</span>  avec un piéton</p>
-
-		        </div>
-
-
-		        <div class="dangereux" >
-
-						<h1 class="titre_subsection">TROTTOIR</h1>
-
-
-		         		<div class="logo"><img src="images/trottoir.png" width="140" height="120" />  </div>
-		        	
-						<p class="pchiffre"><span class="chiffre">23</span>  accidents cyclistes</p>
-		        		<p class="pchiffre"><span class="chiffre">35%</span>  avec un piéton</p>
-		        		<p class="pchiffre"><span class="chiffre">35%</span>  seul</p>
-
-
-
-					
-		        </div>	
-
-
-			
-
-
-			
-
-
-
-
-
-
+		        <div classe="carte">
+				  <iframe src="invest_nuls/index.html" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="800" height="550"></iframe> 
+				  <p> <i> <span class="cle">Clé de lecture</span> : Total des investissements localisés par types de travaux entre 2010 et 2016</i> </p> 
+     			</div>
 
 		    </section>
 	        
@@ -476,9 +216,9 @@ ceci n'est pas pereil que le master
 	                <div class="tweet">
 	                    <h1 style ="text-align: center">Sources</h1>
 	                    <ul>
-	                        <li>Fichier national des accidents corporels de la circulation 2012 (dit "Fichier BAAC", disponible sur data.gouv.fr)</li>
-	                        <li>Le Bilan des Déplacements à Paris en 2012 (disponible sur le site de la ville de Paris paris.fr)</li>
-	                        <li>La plateforme OpenData de JC Decaux sur les Vélibs</li>
+	                        <li> Données des budgets primitifs de la mairie de Paris (disponible sur le site de la ville de Paris paris.fr)</li>
+	                        <li> Données Insee de rencencement 2016 pour la population </li>
+	                        <li> Données Insee sur les niveaux de richesse par arrondissement</li>
 	                        
 	                    </ul>
 	                </div>
