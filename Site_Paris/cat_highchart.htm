@@ -15,7 +15,9 @@ $(function () {
     $('#container').highcharts({
         chart: {
             type: 'column',
-            backgroundColor :'transparent'
+            backgroundColor :'transparent',
+            style :   { fontFamily: 'ralewayextralight, Arial, sans-serif', // default font
+    fontSize: '12px'}
         },
         title: {
             text: 'Investissements cumulés 2010-2016'
@@ -49,7 +51,7 @@ $(function () {
         tooltip: {
             headerFormat: '<span style="font-size:10px">{point.key}</span><table>',            
             pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+                '<td style="padding:0"><b>{point.y:,.0f} </b></td></tr>',
             footerFormat: '</table>',
             shared: true,
             useHTML: true

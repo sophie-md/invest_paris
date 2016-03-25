@@ -11,9 +11,12 @@ ${demo.css}
 		<script type="text/javascript">
 $(function () {
     // Create the chart
+    
     $('#container').highcharts({
         chart: {
-            type: 'column'
+            type: 'column',
+            style :   { fontFamily: 'ralewayextralight, Arial, sans-serif', // default font
+    fontSize: '12px'}
         },
         title: {
             text: 'Montants investis par arrondissement'
@@ -35,19 +38,17 @@ $(function () {
         },
         plotOptions: {
             series: {
-                borderWidth: 0,
-                dataLabels: {
+                    borderWidth: 0,
+                    dataLabels: {
                     enabled: false,
                     format: '{point.y:.1f}%'
-                }
-            }
-        },
+                    }}},
         exporting : {enabled : false},
         credits : {enabled : false},
 
         tooltip: {
             headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.0f}</b> euros investis<br/>'
+            pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:,.0f}</b> euros investis<br/>'
         },
 
         series: [{
